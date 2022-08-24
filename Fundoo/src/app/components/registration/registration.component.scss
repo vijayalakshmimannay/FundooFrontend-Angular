@@ -1,0 +1,134 @@
+
+.informationContainer {
+    box-shadow: 3px 3px 5px 6px #ccc;
+    width: 60%;
+      
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .subdiv {
+    width: 60%;
+    
+  }
+  
+  .fclass {
+    color: #2a1de1;
+    font-size: 35px;
+    font-family: monospace;
+  }
+  
+  .uclass {
+    color: red;
+    font-size: 25px;
+    font-family: monospace;
+  }
+  
+  .nclass {
+    color: yellow;
+    font-size: 25px;
+    font-family: monospace;
+  }
+  
+  .dclass {
+    color: #1a73e8;
+    font-size: 25px;
+    font-family: monospace;
+  }
+  
+  .Oclass {
+    color: rgb(61, 180, 61);
+    font-size: 25px;
+    font-family: monospace;
+  }
+  
+  .oclass {
+    color: red;
+    font-size: 25px;
+    font-family: monospace;
+  }
+  
+  .fstclass {
+    height: 10px;
+  }
+  
+  .subline {
+    font-size: 14px;
+  }
+  .usrclass{
+    width:90%;
+  }
+  
+  .optionmail {
+    color: blue;
+    margin: 30px 0;
+  }
+  
+  #shwpwd {
+    width:18px;
+    height: 18px;
+    color: black;
+  
+  }
+  
+  .img {
+    height: 200px;
+  
+    width: 300px;
+  }
+  
+  .imagtag {
+    font-size: 17px;
+    font-weight: lighter;
+    text-align: center;
+  }
+  
+  .fstid {
+    border-collapse: separate;
+    border-spacing: 20px;
+  }
+  
+  .matformclass {
+    font-size: 11px;
+  }
+  
+  .spaceclass {
+    margin-left: 9px;
+  }
+  
+  .mailclass {
+    width: 450px;
+  }
+  
+  .pswdclass {
+    font-size: 11px;
+  }
+  
+  .confirmclass {
+    margin-left: 9px;
+  }
+  
+  .lastclass {
+    margin: 27px 0;
+    color: #1a73e8;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .checkboxclass{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 7px;
+  }
+  .nextclass{
+  background-color: #1a73e8;
+      border: none;
+      color:white;
+      padding: 10px 30px ;
+      margin-right: 13%;
+      border-radius: 5px;
+  }

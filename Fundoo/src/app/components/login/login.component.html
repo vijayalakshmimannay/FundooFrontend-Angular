@@ -1,0 +1,37 @@
+<div class="Login">
+  <div class="loginContainer">
+    <form [formGroup]="loginform" (ngSubmit)="onsubmit()" class="border"> 
+      <span class="Fclass"><b>F</b></span>
+      <span class="uclass"><b>u</b></span>
+      <span class="nclass"><b>n</b></span>
+      <span class="dclass"><b>d</b></span>
+      <span class="Oclass"><b>o</b></span>
+      <span class="oclass"><b>o</b></span>
+      
+      <div class="titlesignin">Login</div>
+      <div class="thirdtitle">
+        Use your Fundoo Account
+      </div>
+      <mat-form-field class="inputclass" appearance="outline">
+        <mat-label>Email or phone</mat-label>
+        <mat-error > Enter an email or phone number</mat-error>
+        <input matInput placeholder="Email or phone" formControlName="emailorphone"/>
+      </mat-form-field>
+      <div class="forgotmailclass" routerLink="/forgotpage">Forgot email?</div>
+      <mat-form-field class="inputclass" appearance="outline">
+        <mat-label>Password</mat-label>
+        <mat-error > Enter a password</mat-error>
+        <input matInput placeholder="Password" formControlName="password"/>
+      </mat-form-field>
+      
+      <div class="suggestionclass">Not your computer? Use Guest mode to sign in privately.</div>
+      <div class="learnclass">Learn more</div>
+      <a class="createaccountclass" routerLink="/register">Create account</a>
+        
+        <button class="nextclass">Next </button>
+     
+    </form>
+          
+  </div>
+    
+</div>

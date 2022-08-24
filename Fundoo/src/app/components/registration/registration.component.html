@@ -1,0 +1,81 @@
+<div class="registration">
+  <div class="informationContainer">
+    <div class="subdiv">
+        <form [formGroup]="registerForm" (ngSubmit)="onsubmit()" class="border"> 
+          <span class = "fclass">f</span>
+          <span class = "uclass">u</span>
+          <span class = "nclass">n</span>
+          <span class = "dclass">d</span>
+          <span class = "oclass">o</span>
+          <span class = "oclass">o</span>
+          <div class="creation">
+            <h1>Create Your Fundoo Account</h1>
+          </div>
+  
+          <div fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column">
+            <mat-form-field appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input matInput placeholder="firstname" formControlName="firstName" />
+              <mat-error >  Enter First And Last Name </mat-error>
+            </mat-form-field>
+            <mat-form-field class="spaceclass" appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input matInput placeholder="lastname" formControlName="lastName" />
+              
+            </mat-form-field>
+          </div>
+  
+          <div fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column">
+            <mat-form-field class="usrclass" appearance="outline">
+              <mat-label>User Name</mat-label>
+              <input matInput placeholder="UserName" formControlName="email"/>
+              <mat-hint class="subline">you can use letters,numbers & periods</mat-hint>
+              <mat-error >  Choose a Gmail Address </mat-error>
+            </mat-form-field>
+          </div>
+  
+          <div class="optionmail">Use my current email address instead</div>
+  
+          <div fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column">
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input  id = "Pass" matInput placeholder="Password" type ="password" formControlName="password"/>
+              <mat-error >  Enter a Password </mat-error>
+            </mat-form-field>
+  
+            <mat-form-field class="confirmclass" appearance="outline">
+              <mat-label>confirm</mat-label>
+              <input matInput placeholder="confirm" formControlName="confirmPassword"/>
+              </mat-form-field><br />
+            <mat-hint class="subline">
+              use 8 or more characters with a mix of letters , numbers &
+              symbol</mat-hint>
+  
+          </div>
+  
+          <div class="checkboxclass">
+            <input type="checkbox" id="shwpwd" onclick="HidePassword ()"  />
+            <label class="" > Show password</label>
+        
+          </div>
+  
+          <div class="lastclass">
+            <div routerLink="/login">
+              sign in instead
+            </div>
+  
+            <button class="nextclass">Next</button>
+          </div>
+        </form>
+         </div>
+         <div class="imageclass">
+          <img class="img" src="../../../assets/account.svg" />
+          <div class="imagtag">
+          One account.All of google.<br class="secondtag" />Working for you
+          </div>
+        
+         </div>
+  
+    </div>
+  </div>
+          
