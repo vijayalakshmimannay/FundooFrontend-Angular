@@ -1,0 +1,63 @@
+//<p>dashboard works!</p>
+
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar color="primary" class="example-toolbar">
+        <button class="menuclass" mat-icon-button (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <img class="keepclass" src="../../../../assets/keep_2020q4_48dp.png">
+        <h1 class="example-app-name">Fundoo</h1>
+        <input type="text" class="subtitleclass" placeholder="search">
+        <div class="iconclass">
+            <img class="refreshclass" src="../../../../assets/refresh.svg">
+            <img class="refreshclass" src="../../../../assets/listview.svg">
+            <img class="refreshclass" src="../../../../assets/settings.svg">
+        </div>
+        <div class="profileclass">
+            <img class="refreshclass" src="../../../../assets/appsicon.svg"> 
+            <button mat-button [matMenuTriggerFor]="afterMenu" class="refresh_container_item setting">
+                <img class="refreshclass" src="../../../../assets/account (2).svg">
+            </button>
+            <mat-menu #afterMenu="matMenu" xPosition="after">
+                <button mat-menu-item>Logout</button>
+                
+            </mat-menu>
+        </div>
+    
+    
+    </mat-toolbar>
+  
+    <mat-sidenav-container class="example-sidenav-container"
+                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+        <mat-nav-list> 
+          <!-- <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a> -->
+          <a mat-list-item routerLink="/dashboard/notes"><img class="notesclass"  src="../../../../assets/notes.svg">Notes</a>
+          <a mat-list-item routerLink="/dashboard/reminders"><img class="notesclass"  src="../../../../assets/notifications.svg">Reminders</a>
+          <a mat-list-item routerLink="/dashboard/edit"><img class="notesclass"  src="../../../../assets/edit.svg">Edit</a>
+          <a mat-list-item routerLink="/dashboard/archive"><img class="notesclass" src="../../../../assets/archive.svg">Archive</a>
+          <a mat-list-item routerLink="/dashboard/trash"  ><img class="notesclass"  src="../../../../assets/delete.svg">Trash</a>
+        </mat-nav-list>
+
+        <!-- <mat-nav-list (mouseleave)="isExpandable=false">
+            <div class="navlist" fxLayout="row" fxLayoutAlign="start center" (mouseover)="isExpandable=true"
+              fxLayoutGap="20px" mat-list-item (click)="notes();">
+              <button class="navBtn btnPosition" mat-icon-button (mouseover)="isExpandable=true">
+                <img src="../../../../assets/notes.svg" alt="">
+              </button>
+              <p class="navName" *ngIf="isExpandable">Notes</p>
+            </div>
+    
+            
+          </mat-nav-list>
+         -->
+        </mat-sidenav> 
+  
+      <mat-sidenav-content>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+  
+
