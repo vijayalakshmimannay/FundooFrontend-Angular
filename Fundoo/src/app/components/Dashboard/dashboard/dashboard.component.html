@@ -40,23 +40,10 @@
           <a mat-list-item routerLink="/dashboard/trash"  ><img class="notesclass"  src="../../../../assets/delete.svg">Trash</a>
         </mat-nav-list>
 
-        <!-- <mat-nav-list (mouseleave)="isExpandable=false">
-            <div class="navlist" fxLayout="row" fxLayoutAlign="start center" (mouseover)="isExpandable=true"
-              fxLayoutGap="20px" mat-list-item (click)="notes();">
-              <button class="navBtn btnPosition" mat-icon-button (mouseover)="isExpandable=true">
-                <img src="../../../../assets/notes.svg" alt="">
-              </button>
-              <p class="navName" *ngIf="isExpandable">Notes</p>
-            </div>
-    
-            
-          </mat-nav-list>
-         -->
         </mat-sidenav> 
   
-      <mat-sidenav-content>
-        <router-outlet></router-outlet>
-      </mat-sidenav-content>
+      
+       <p><router-outlet></router-outlet> </p>    
     </mat-sidenav-container>
   </div>
   

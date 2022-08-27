@@ -1,0 +1,44 @@
+<div>
+    <div *ngIf="display;then takeNotes else inputNotes"></div>
+    <ng-template #takeNotes>
+      <div class="takenotes">
+        <input class="notesbar" type="text" placeholder="Take a note..." (click)="display = !display">
+        <button class="notesbutton">
+          <img class="notes_img" src="../../../assets/check_box.svg">    
+          <img class="notes_img" src="../../../assets/brush_black.svg">
+          <img class="notes_img" src="../../../assets/insert_photo.svg">
+        </button>
+      </div>
+    </ng-template>
+    <ng-template #inputNotes>
+      <form [formGroup]="createNotesForm" (ngSubmit)="onSubmit()">
+        <div class="createnotes">
+          <div class="notesfield">
+  
+            <div class="titlebar">
+              <input class="title" type="text" placeholder="Title"  formControlName="title">
+              <button class="notesbutton">
+                <img class="notes_img" src="../../../assets/push_pin.svg">
+              </button>
+            </div>
+            <input class="desc" type="text" placeholder="Description" style="font-size: 15px; font-weight: 200;"  formControlName="Description">
+            <div class="notesicon">
+              <div class="icons">
+                <button class="notesbutton">
+                  <img src="../../../assets/add_alert_black_24dp.svg">
+                  <img src="../../../assets/person_add_alt_1_black_24dp.svg">
+                  <img src="../../../assets/palette_black_24dp.svg">
+                  <img src="../../../assets/insert_photo_black_24dp (1).svg">
+                  <img src="../../../assets/archive.svg">
+                  <img src="../../../assets/more_vert_black_24dp.svg">
+                  <img src="../../../assets/undo_black_24dp.svg">
+                  <img src="../../../assets/redo_black_24dp.svg">
+                </button>
+              </div>
+              <button class="notesclose notesbutton">Close</button>           
+            </div>
+          </div>
+        </div>
+      </form>
+    </ng-template>
+  </div>
