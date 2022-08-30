@@ -7,6 +7,7 @@ import { NotesServiceService } from 'src/app/services/notesService/notes-service
   styleUrls: ['./getall-notes.component.scss']
 })
 export class GetallNotesComponent implements OnInit {
+  notesArray : any;
 
   constructor(private note: NotesServiceService) { }
 
@@ -16,6 +17,8 @@ export class GetallNotesComponent implements OnInit {
   onSubmit(){
     this.note.getallnotes().subscribe((response:any) =>{
       console.log(response);
+      this.notesArray = response.data;
+
     })
     
   }

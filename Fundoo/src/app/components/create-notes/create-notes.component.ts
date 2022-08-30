@@ -12,6 +12,7 @@ export class CreateNotesComponent implements OnInit {
   createNotesForm!: FormGroup;
   display = true;
   submitted = false;
+  //notesArray : any;
   // input_title = '';
   // input_description = '';
   constructor(private formBuilder: FormBuilder,  private note: NotesServiceService, private activeRoute:ActivatedRoute) { }
@@ -35,6 +36,7 @@ export class CreateNotesComponent implements OnInit {
       console.log(reqData);
       this.note.createnoteservice(reqData).subscribe((response:any) =>{
         console.log(response); 
+     
       });
     }
   }

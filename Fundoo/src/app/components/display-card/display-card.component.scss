@@ -1,0 +1,32 @@
+.card {
+     
+    margin-bottom: 8px;
+    display: table-row;
+    margin-left: 200px;
+  }
+ .notesContainer{
+   padding: 10px;
+   border: 1px lightgray ;
+   margin: 10px;
+   width: 180px;
+ }
+ .icons{
+   display: flex;
+   gap: 4px;
+}
+.moreicons{
+   height: 15px;
+   width: 15px;
+   padding-top: 6px;
+}
+.notesbutton{
+   border: none;
+   background: none;
+   cursor: pointer;
+}
+.dialogue{
+   visibility: hidden;
+   margin-top: 10px;
+   margin-bottom: -30px;
+   margin-right: 30px;
+}

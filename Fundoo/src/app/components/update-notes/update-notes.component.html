@@ -1,0 +1,30 @@
+
+<div>
+    <div class="createnotes">
+        <div class="notesfield">
+
+            <div class="titlebar">
+                <input class="title" [(ngModel)]="title" type="text" placeholder="Title">
+                <button class="notesbutton">
+                    <img class="notes_img" src="../../../assets/push_pin.svg">
+                </button>
+            </div>
+            <input class="description" type="text" placeholder="Description" [(ngModel)]="description" style="font-size: 15px; font-weight: 200;">
+            <div class="notesicon">
+                <div class="icons">
+                    <button class="notesbutton">
+                        <img src="../../../assets/add_alert_black_24dp.svg">
+                        <img src="../../../assets/person_add_alt_1_black_24dp.svg">
+                        <img src="../../../assets/palette_black_24dp.svg">
+                        <img src="../../../assets/insert_photo_black_24dp (1).svg">
+                        <img src="../../../assets/archive.svg">
+                        <img src="../../../assets/more_vert_black_24dp.svg">
+                        <img src="../../../assets/undo_black_24dp.svg">
+                        <img src="../../../assets/redo_black_24dp.svg">
+                    </button>
+                </div>
+                <button class="notesclose notesbutton" (click)="update()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<!-- <p>display-card works!</p> -->
+<div *ngFor= "let notes of notesList" class="card">
+    <mat-card class="example-card" class="notesContainer">
+      <mat-card-title (click)=action(notes)>{{notes.title}}</mat-card-title>
+      <mat-card-content>
+        <p (click)=action(notes)>{{notes.description}}</p>
+        
+      </mat-card-content>
+      
+      <div class="icons" ngMouseover="display">
+        <button class="notesbutton">
+            <img class="moreicons" src="../../../assets/notifications.svg">
+        </button>
+        <button class="notesbutton">
+            <img class="moreicons" src="../../../assets/person_add_alt_1_black_24dp.svg">
+        </button>
+        <button class="notesbutton">
+            <img class="moreicons" src="../../../assets/palette_black_24dp.svg">
+        </button>
+        <button class="notesbutton">
+            <img class="moreicons" src="../../../assets/insert_photo_black_24dp (1).svg">
+        </button>
+        <button class="notesbutton">
+            <img class="moreicons" src="../../../assets/archive.svg">
+        </button>
+        <button class="notesbutton">
+            <img class="moreicons" src="../../../assets/more_vert_black_24dp.svg">
+        </button>
+    </div>
+    <mat-card-actions>
+     
+      </mat-card-actions>
+    </mat-card>
+</div>
