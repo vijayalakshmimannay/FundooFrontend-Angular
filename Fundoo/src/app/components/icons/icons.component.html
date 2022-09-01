@@ -1,1 +1,29 @@
-<p>icons works!</p>
+<div class="icons" ngMouseover="display">
+    <button class="notesbutton">
+        <img class="moreicons" src="../../../assets/notifications.svg">
+    </button>
+    <button class="notesbutton">
+        <img class="moreicons" src="../../../assets/person_add_alt_1_black_24dp.svg">
+    </button>
+    <button class="notesbutton">
+        <img class="moreicons" src="../../../assets/palette_black_24dp.svg">
+    </button>
+    <button class="notesbutton">
+        <img class="moreicons" src="../../../assets/insert_photo_black_24dp (1).svg">
+    </button>
+    <button class="notesbutton">
+        <img class="moreicons" (click) = "onArchive()" src="../../../assets/archive.svg">
+    </button>
+    <button class="notesbutton">
+        <img class="moreicons" src="../../../assets/more_vert_black_24dp.svg" [matMenuTriggerFor]="moreMenu">
+    </button>
+
+    <mat-menu #moreMenu="matMenu" xPosition="before">
+        <button mat-menu-item (click) = "onDelete()" >Delete note</button>
+        <button mat-menu-item >Add label</button>
+        <button mat-menu-item>Add drawing</button>
+        <button mat-menu-item>Make a copy</button>
+        <button mat-menu-item>Show checkboxes</button>
+    
+    </mat-menu>
+</div>

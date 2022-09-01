@@ -38,6 +38,7 @@ export class CreateNotesComponent implements OnInit {
         console.log(response); 
      
       });
+      this.display = true
     }
   }
 

@@ -21,12 +21,14 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 
-import { IconsComponent } from './components/icons/icons/icons.component';
 import { CreateNotesComponent } from './components/create-notes/create-notes.component';
 import { GetallNotesComponent } from './components/getall-notes/getall-notes.component';
 import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
 import { DisplayCardComponent } from './components/display-card/display-card.component';
 import { UpdateNotesComponent } from './components/update-notes/update-notes.component';
+import { IconsComponent } from './components/icons/icons.component';
+import { TrashComponent } from './components/trash/trash.component';
+import { ArchiveComponent } from './components/archive/archive.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { UpdateNotesComponent } from './components/update-notes/update-notes.com
     IconsComponent,
     DisplayCardComponent,
     UpdateNotesComponent,
+    TrashComponent,
+    ArchiveComponent
   ],
   imports: [
     BrowserModule,

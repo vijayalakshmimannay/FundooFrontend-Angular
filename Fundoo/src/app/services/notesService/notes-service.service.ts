@@ -22,7 +22,7 @@ export class NotesServiceService {
     let headers = {
     headers: new HttpHeaders({
     'Content-type': 'application/json',
-    'Authorization': this.token
+    'Authorization':'Bearer '+this.token
     })
     
     }
@@ -56,7 +56,37 @@ export class NotesServiceService {
         return this.httpService.putService('/Notes/UpdateNote?NoteID='+NoteID,data,  true, headers)
   
       }
+      trashNotes(data : any) {
+
+        console.log("request data");
+        
+        let headers = {
+        headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization':'Bearer '+this.token
+        })
+        
+        }
+        return this.httpService.putService('/Notes/Trash?NoteID='+data.noteID,{},true, headers)
+      }
+
+      archiveNotes(data : any) {
+
+          console.log("request data");
+          
+          let headers = {
+          headers: new HttpHeaders({
+          'Content-type': 'application/json',
+          'Authorization':'Bearer '+this.token
+          })
+          
+          }
+          return this.httpService.putService('/Notes/Archive?NoteID='+data.NoteID,{},true, headers)
+      }
     }
+    
+
+
 
   
   
