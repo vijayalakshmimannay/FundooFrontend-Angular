@@ -16,6 +16,7 @@ export class CreateNotesComponent implements OnInit {
   // input_title = '';
   // input_description = '';
   constructor(private formBuilder: FormBuilder,  private note: NotesServiceService, private activeRoute:ActivatedRoute) { }
+  @Output() refreshFromCreateNotes = new EventEmitter<string>();
   
 
   ngOnInit(): void {
@@ -36,7 +37,7 @@ export class CreateNotesComponent implements OnInit {
       console.log(reqData);
       this.note.createnoteservice(reqData).subscribe((response:any) =>{
         console.log(response); 
-     
+        this.refreshFromCreateNotes.emit(response);
       });
       this.display = true
     }

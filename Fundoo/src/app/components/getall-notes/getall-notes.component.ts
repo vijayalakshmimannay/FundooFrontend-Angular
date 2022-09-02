@@ -19,12 +19,21 @@ export class GetallNotesComponent implements OnInit {
       console.log(response);
       this.notesArray = response.data;
       this.notesArray = this.notesArray.filter((Object : any) =>{
-        return Object.trash == false
+        return Object.trash == false && Object.archive == false
       })
       this.notesArray.reverse();
 
     })
     
+  }
+  autorefreshGetallNotes($event:any){
+    console.log($event);
+    this.onSubmit();
+  }
+
+  autorefreshCreateNotes($event:any){
+    console.log($event);
+    this.onSubmit();
   }
 
 }

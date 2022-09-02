@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NotesServiceService } from 'src/app/services/notesService/notes-service.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { NotesServiceService } from 'src/app/services/notesService/notes-service
 })
 export class IconsComponent implements OnInit {
   @Input() notesObject:any
+  @Output() autorefresh = new EventEmitter<string>();
 
   constructor(private notes:NotesServiceService) { }
 
@@ -37,6 +38,7 @@ export class IconsComponent implements OnInit {
     console.log(reqData)
     this.notes.trashNotes(reqData).subscribe((response: any) => {
       console.log("Note Trashed Successfully",response);
+      this.autorefresh.emit(response);
     })
   }
   onArchive(){
@@ -46,6 +48,7 @@ export class IconsComponent implements OnInit {
     console.log(reqData)
     this.notes.archiveNotes(reqData).subscribe((response: any) => {
       console.log(response);
+      this.autorefresh.emit(response);
     })
 
   }
@@ -60,5 +63,6 @@ export class IconsComponent implements OnInit {
       console.log(response)
     })
   }
+
  
 }

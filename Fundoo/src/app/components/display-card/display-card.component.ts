@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { UpdateNotesComponent } from '../update-notes/update-notes.component';
 
@@ -9,8 +9,9 @@ import { UpdateNotesComponent } from '../update-notes/update-notes.component';
 })
 export class DisplayCardComponent implements OnInit {
  @Input () notesList : any;
+ @Output() refreshFromGetallNotes = new EventEmitter<string>();
   constructor(public dialogue:MatDialog) { }
-
+  message : any;
   ngOnInit(): void {
   }
 
@@ -22,8 +23,15 @@ export class DisplayCardComponent implements OnInit {
     })
     updatenote.afterClosed().subscribe(result => {
       console.log(result)
+      
     })
 
   }
+  receivedAutoRefresh($event:any){
+    this.message=$event
+    console.log($event);
+    this.refreshFromGetallNotes.emit(this.message);
+  }
+
 
 }

@@ -9,7 +9,7 @@
       </mat-card-content>
       
       <div>
-       <app-icons [notesObject] = "notes"></app-icons>
+       <app-icons [notesObject] = "notes" (autorefresh)="receivedAutoRefresh($event)"></app-icons>
     </div>
     <mat-card-actions>
      
