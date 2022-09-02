@@ -9,6 +9,7 @@ import { HttpserviceService } from '../httpservice/httpservice.service';
 export class NotesServiceService {
 
   token:any;
+  colour: any;
 
   constructor( private httpService:HttpserviceService) {
     this.token= localStorage.getItem('token')
@@ -81,8 +82,20 @@ export class NotesServiceService {
           })
           
           }
-          return this.httpService.putService('/Notes/Archive?NoteID='+data.NoteID,{},true, headers)
+          return this.httpService.putService('/Notes/Archive?NoteID='+data.noteID,{},true, headers)
       }
+
+      changeColor(data: any) {
+
+        let headers = {
+          headers: new HttpHeaders({
+            'Content-Type': 'application/json',
+            'Authorization':'Bearer '+this.token
+          })
+        };
+        return this.httpService.putService('/Notes/Colour?notesId='+data.noteID+'&colour='+data.colour,{},true, headers);
+      }
+
     }
     
 

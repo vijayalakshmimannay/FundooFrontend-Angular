@@ -1,9 +1,9 @@
 <!-- <p>display-card works!</p> -->
 <div *ngFor= "let notes of notesList" class="card">
-    <mat-card class="example-card" class="notesContainer">
+    <mat-card class="example-card" class="notesContainer" [style.background] = "notes.colour">
       <mat-card-title (click)=action(notes)>{{notes.title}}</mat-card-title>
       <mat-card-content>
-        <p (click)=action(notes)>{{notes.description}}</p>
+        <div (click)=action(notes) style="min-height: 35px; display: block; overflow-wrap: break-word;">{{notes.description}} </div>
 
         
       </mat-card-content>

@@ -6,7 +6,7 @@
         <img class="moreicons" src="../../../assets/person_add_alt_1_black_24dp.svg">
     </button>
     <button class="notesbutton">
-        <img class="moreicons" src="../../../assets/palette_black_24dp.svg">
+        <img class="moreicons" src="../../../assets/palette_black_24dp.svg" [matMenuTriggerFor]="colorMenu">
     </button>
     <button class="notesbutton">
         <img class="moreicons" src="../../../assets/insert_photo_black_24dp (1).svg">
@@ -19,11 +19,25 @@
     </button>
 
     <mat-menu #moreMenu="matMenu" xPosition="before">
-        <button mat-menu-item (click) = "onDelete()" >Delete note</button>
-        <button mat-menu-item >Add label</button>
+        <button mat-menu-item (click) = "onDelete()">Delete note</button>
+        <button mat-menu-item>Add label</button>
         <button mat-menu-item>Add drawing</button>
         <button mat-menu-item>Make a copy</button>
         <button mat-menu-item>Show checkboxes</button>
     
     </mat-menu>
+
+    <mat-menu #colorMenu="matMenu" xPosition="before" >
+        <div *ngFor = 'let colors of colors'>
+            <button class="colorIcon" [style.background]="colors.code" (click)="selectColor(colors)"></button>
+        </div>
+    </mat-menu>
+
+     <!-- <mat-menu #colormenu="colormenu"> <div class="pop">
+        <div *ngFor="let color of colour" class="colourButton"> 
+            <button mat-mini-fab [style.background]="colour?.code"></button>
+        </div> 
+    </div>
+    </mat-menu>  -->
+
 </div>

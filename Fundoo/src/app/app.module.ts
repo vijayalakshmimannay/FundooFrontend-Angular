@@ -23,12 +23,14 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 import { CreateNotesComponent } from './components/create-notes/create-notes.component';
 import { GetallNotesComponent } from './components/getall-notes/getall-notes.component';
-import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
 import { DisplayCardComponent } from './components/display-card/display-card.component';
 import { UpdateNotesComponent } from './components/update-notes/update-notes.component';
 import { IconsComponent } from './components/icons/icons.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { ArchiveComponent } from './components/archive/archive.component';
+import { AuthguardService } from './services/authguard.service';
+
+
 
 @NgModule({
   declarations: [
@@ -40,7 +42,7 @@ import { ArchiveComponent } from './components/archive/archive.component';
     DashboardComponent,
     CreateNotesComponent,
     GetallNotesComponent,
-    DisplayNotesComponent,
+     DisplayCardComponent,
     IconsComponent,
     DisplayCardComponent,
     UpdateNotesComponent,
@@ -65,7 +67,9 @@ import { ArchiveComponent } from './components/archive/archive.component';
     MatDialogModule,
 
   ],
-  providers: [],
+  providers: [
+   AuthguardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
