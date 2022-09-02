@@ -61,6 +61,7 @@ export class IconsComponent implements OnInit {
     console.log(reqData)
     return this.notes.changeColor(reqData).subscribe((response:any) =>{
       console.log(response)
+      this.autorefresh.emit(response);
     })
   }
 

@@ -27,6 +27,14 @@ onSubmit(){
 
 }
 
-
+restore(notes:any){
+  let reqData = {
+    noteID : notes.noteID
+  }
+  console.log(reqData)
+  this.notes.trashNotes(reqData).subscribe((response:any) =>{
+  console.log(response)
+  })
+}
 
 }
