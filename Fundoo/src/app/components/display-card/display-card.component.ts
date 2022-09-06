@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { UpdateNotesComponent } from '../update-notes/update-notes.component';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-display-card',
@@ -10,9 +11,14 @@ import { UpdateNotesComponent } from '../update-notes/update-notes.component';
 export class DisplayCardComponent implements OnInit {
  @Input () notesList : any;
  @Output() refreshFromGetallNotes = new EventEmitter<string>();
-  constructor(public dialogue:MatDialog) { }
+  constructor(public dialogue:MatDialog, private data:DataService) { }
   message : any;
+  filterNote : any;
   ngOnInit(): void {
+    this.data.incomingData.subscribe((response) => {
+      console.log("Search in process", response);
+      this.filterNote = response;
+    })
   }
 
   action(notes : any){
@@ -32,6 +38,7 @@ export class DisplayCardComponent implements OnInit {
     console.log($event);
     this.refreshFromGetallNotes.emit(this.message);
   }
+
 
 
 }

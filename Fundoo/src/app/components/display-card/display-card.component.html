@@ -1,5 +1,5 @@
 <!-- <p>display-card works!</p> -->
-<div *ngFor= "let notes of notesList" class="card">
+<div *ngFor= "let notes of notesList |filter:filterNote" class="card">
     <mat-card class="example-card" class="notesContainer" [style.background] = "notes.colour">
       <mat-card-title (click)=action(notes)>{{notes.title}}</mat-card-title>
       <mat-card-content>

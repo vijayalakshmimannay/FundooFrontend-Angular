@@ -29,6 +29,7 @@ import { IconsComponent } from './components/icons/icons.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { AuthguardService } from './services/authguard.service';
+import { FilterPipe } from './Pipe/filter.pipe';
 
 
 
@@ -47,7 +48,8 @@ import { AuthguardService } from './services/authguard.service';
     DisplayCardComponent,
     UpdateNotesComponent,
     TrashComponent,
-    ArchiveComponent
+    ArchiveComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
